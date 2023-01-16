@@ -28,6 +28,10 @@ void bubble_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void selection_sort(int *array, size_t size);
 void quick_sort(int *array, size_t size);
+void merge_sort(int *array, size_t size);
+void merge_sort_recursion(int *array, int l, int r);
+void merge_sorted_arrays(int *array, int l, int m, int r);
+void print_array_status(char *status, int *array, int size);
 /*end of prototype functions*/
 
 #endif /*SORT_H*/
