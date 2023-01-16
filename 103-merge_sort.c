@@ -12,9 +12,9 @@
 void merge_sort(int *array, size_t size)
 {
 if (size < 2 || !array)
-    return;
+return;
 else
-    merge_sort_recursion(array, 0, size - 1);
+merge_sort_recursion(array, 0, size - 1);
 }
 
 /**
@@ -30,13 +30,13 @@ void merge_sort_recursion(int *array, int left, int right)
 int mid = ((right - left - 1) / 2) + left;
 
 if (right <= left)
-    return;
+return;
 else
 {
-    merge_sort_recursion(array, left, mid);
-    merge_sort_recursion(array, mid + 1, right);
-    merge_sorted_arrays(array, left, mid, right);
-    print_array_status("Done", &array[left], (right - left + 1));
+merge_sort_recursion(array, left, mid);
+merge_sort_recursion(array, mid + 1, right);
+merge_sorted_arrays(array, left, mid, right);
+print_array_status("Done", &array[left], (right - left + 1));
 }
 }
 
@@ -58,39 +58,39 @@ int i, j, k;
 
 printf("Merging...\n");
 for (i = 0; i < left_length; i++)
-        temp_left[i] = array[left + i];
+temp_left[i] = array[left + i];
 print_array_status("left", &array[left], left_length);
 for (i = 0; i < right_length; i++)
-    temp_right[i] = array[mid + 1 + i];
+temp_right[i] = array[mid + 1 + i];
 print_array_status("right", &array[mid + 1], right_length);
 i = 0, j = 0, k = left;
 while (i < left_length && j < right_length)
 {
-    if (temp_left[i] <= temp_right[j])
-    {
-        array[k] = temp_left[i];
-        i++;
-    }
-    else
-    {
-        array[k] = temp_right[j];
-        j++;
-    }
-    k++;
+if (temp_left[i] <= temp_right[j])
+{
+array[k] = temp_left[i];
+i++;
+}
+else
+{
+array[k] = temp_right[j];
+j++;
+}
+k++;
 }
 
 while (i < left_length)
 {
-    array[k] = temp_left[i];
-    i++;
-    k++;
+array[k] = temp_left[i];
+i++;
+k++;
 }
 
 while (j < right_length)
 {
-    array[k] = temp_right[j];
-    j++;
-    k++;
+array[k] = temp_right[j];
+j++;
+k++;
 }
 }
 
