@@ -32,6 +32,8 @@ void merge_sort(int *array, size_t size);
 void merge_sort_recursion(int *array, int l, int r);
 void merge_sorted_arrays(int *array, int l, int m, int r);
 void print_array_status(char *status, int *array, int size);
+void heapify(int *array, int min, int max, size_t size);
+void heap_sort(int *array, size_t size);
 /*end of prototype functions*/
 
 #endif /*SORT_H*/
